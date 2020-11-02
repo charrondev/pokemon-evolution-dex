@@ -3753,42 +3753,6 @@
         "regionName": "Hoenn"
     },
     {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Castform_(Pok%C3%A9mon)",
-        "name": "Castform (Sunny Form)",
-        "nationalID": 351,
-        "familyName": "Castform family",
-        "color": "#A8A878",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/b/b6/351Castform-Sunny.png/110px-351Castform-Sunny.png",
-        "regionName": "Hoenn"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Castform_(Pok%C3%A9mon)",
-        "name": "Castform (Rainy Form)",
-        "nationalID": 351,
-        "familyName": "Castform family",
-        "color": "#A8A878",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/8/89/351Castform-Rainy.png/110px-351Castform-Rainy.png",
-        "regionName": "Hoenn"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Castform_(Pok%C3%A9mon)",
-        "name": "Castform (Snowy Form)",
-        "nationalID": 351,
-        "familyName": "Castform family",
-        "color": "#A8A878",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/f/f9/351Castform-Snowy.png/110px-351Castform-Snowy.png",
-        "regionName": "Hoenn"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Castform_(Pok%C3%A9mon)",
-        "name": "Castform (Snowy Form)",
-        "nationalID": 351,
-        "familyName": "Castform family",
-        "color": "#A8A878",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/f/f9/351Castform-Snowy.png/110px-351Castform-Snowy.png",
-        "regionName": "Hoenn"
-    },
-    {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Kecleon_(Pok%C3%A9mon)",
         "name": "Kecleon",
         "nationalID": 352,
@@ -6603,51 +6567,6 @@
         "familyName": "Genesect family",
         "color": "#A8B820",
         "imageUrl": "//cdn.bulbagarden.net/upload/thumb/4/46/649Genesect.png/250px-649Genesect.png",
-        "regionName": "Unova"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Genesect_(Pok%C3%A9mon)",
-        "name": "Shock Drive Genesect",
-        "nationalID": 649,
-        "familyName": "Genesect family",
-        "color": "#A8B820",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/a/aa/HOME649Y.png/110px-HOME649Y.png",
-        "regionName": "Unova"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Genesect_(Pok%C3%A9mon)",
-        "name": "Burn Drive Genesect",
-        "nationalID": 649,
-        "familyName": "Genesect family",
-        "color": "#A8B820",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/b/b9/HOME649R.png/110px-HOME649R.png",
-        "regionName": "Unova"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Genesect_(Pok%C3%A9mon)",
-        "name": "Chill Drive Genesect",
-        "nationalID": 649,
-        "familyName": "Genesect family",
-        "color": "#A8B820",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/7/7f/HOME649W.png/110px-HOME649W.png",
-        "regionName": "Unova"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Genesect_(Pok%C3%A9mon)",
-        "name": "Chill Drive Genesect",
-        "nationalID": 649,
-        "familyName": "Genesect family",
-        "color": "#A8B820",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/7/7f/HOME649W.png/110px-HOME649W.png",
-        "regionName": "Unova"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Genesect_(Pok%C3%A9mon)",
-        "name": "Douse Drive Genesect",
-        "nationalID": 649,
-        "familyName": "Genesect family",
-        "color": "#A8B820",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/e/e5/HOME649B.png/110px-HOME649B.png",
         "regionName": "Unova"
     },
     {

@@ -26,12 +26,14 @@ export interface IDexMon {
 
 export interface IDexMonExtended extends IDexMon {
     familyID: string;
+    slug: string;
 }
 
 export class PokemonModel {
     private familiesByName: Map<string, IDexFamily> = new Map();
     private pokemonByRegion: Map<string, IDexMon[]> = new Map();
     private regions: Set<string> = new Set();
+    private allPokemon: IDexMonExtended[];
 
     public constructor() {
         // Index the families.
@@ -48,6 +50,8 @@ export class PokemonModel {
             }
             this.pokemonByRegion.get(regionName).push(pokemon);
         });
+
+        this.allPokemon = this.applyFamilyIDs(pokemonData);
     }
 
     public getRegionNames(): string[] {
@@ -58,9 +62,19 @@ export class PokemonModel {
         return this.applyFamilyIDs(this.pokemonByRegion.get(regionName));
     }
 
+    public search(keyword: string): string[] {
+        return this.allPokemon
+            .filter((poke) => {
+                return poke.name.toLowerCase().includes(keyword.toLowerCase());
+            })
+            .map((poke) => {
+                return poke.slug;
+            });
+    }
+
     private applyFamilyIDs(dexMon: IDexMon[]): IDexMonExtended[] {
         return dexMon.map((mon, i) => {
-            const { regionName, imageUrl } = mon;
+            const { regionName, imageUrl, name } = mon;
             const regionLetter = regionName.charAt(0).toUpperCase();
             const finalImageUrl = imageUrl.startsWith("//")
                 ? `https:${imageUrl}`
@@ -68,6 +82,7 @@ export class PokemonModel {
             const numberString = `${i + 1}`.padStart(3, "0");
             return {
                 ...mon,
+                slug: name.toLowerCase().replace(/\s/g, "-"),
                 imageUrl: finalImageUrl,
                 familyID: `${regionLetter} ${numberString}`,
             };

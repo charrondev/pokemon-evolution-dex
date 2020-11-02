@@ -53,3 +53,36 @@ export function DexHeader() {
         </header>
     );
 }
+
+function DexSearch() {
+    const [isActive, setIsActive] = useState(false);
+    const [searchTerm, setSearchTerm] = useState("");
+    const model = usePokemonModel();
+
+    useEffect(() => {
+        function handler(e: KeyboardEvent) {
+            if (e.ctrlKey && e.key === "k") {
+                setSearchTerm("");
+                if (isActive) {
+                    setIsActive(true);
+                } else {
+                    setIsActive(false);
+                }
+            }
+        }
+    });
+
+    const pokes = isActive && searchTerm ? model.search(searchTerm) : [];
+
+    return (
+        <div>
+            <input
+                type="text"
+                onChange={(e) => {
+                    setSearchTerm(e.target.value);
+                }}
+                value={searchTerm}
+            />
+        </div>
+    );
+}

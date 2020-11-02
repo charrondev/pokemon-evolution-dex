@@ -80,7 +80,7 @@ function BoxGrid(props: { pokemon: IDexMonExtended[] }) {
 
 function PokemonItem(props: IDexMonExtended) {
     return (
-        <div className={styles.pokemon}>
+        <div className={styles.pokemon} id={props.slug}>
             <h3 className={styles.pokemonTitle}>
                 <a href={props.bulbapediaUrl}>{props.name}</a>
                 <span className={styles.familyID}>{props.familyID}</span>

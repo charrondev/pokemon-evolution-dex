@@ -241,7 +241,7 @@ const IGNORE_WORDS = [
     "cosplay",
     "in a cap",
     "partner ",
-    " Size)",
+    "Size)",
     "(Event)",
     "Sunny Form",
     "Rainy Form",
@@ -255,6 +255,7 @@ const IGNORE_WORDS = [
     "Deoxys (Speed Forme)",
     "Cherrim (Sunshine Form)",
     "Shaymin (Sky Forme)",
+    "Flower)",
     "Deerling (Summer Form)",
     "Deerling (Autumn Form)",
     "Deerling (Winter Form)",
@@ -286,7 +287,10 @@ function normalizeName(name: string): string {
 function shouldIgnoreMon(name: string): boolean {
     const normalized = name.toLowerCase();
     for (const ignoreWord of IGNORE_WORDS) {
-        if (normalized.includes(ignoreWord)) {
+        if (
+            normalized.includes(ignoreWord.toLowerCase()) ||
+            normalized === ignoreWord.toLowerCase()
+        ) {
             return true;
         }
     }
