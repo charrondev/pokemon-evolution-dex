@@ -1,0 +1,154 @@
+/**
+ * @copyright 2020 Adam (charrondev) Charron
+ * @license Proprietary
+ */
+
+$whiteBg: transparentize($color: #fff, $amount: 0.5);
+
+.title {
+    font-size: 24px;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 24px 0;
+    display: block;
+
+    &:before {
+        display: block;
+        content: " ";
+        margin-top: -100px;
+        height: 100px;
+        // padding-top: 100px;
+        width: 100%;
+        // visibility: hidden;
+        pointer-events: none;
+        position: relative;
+        z-index: -100000;
+    }
+}
+
+.wrapperTitle {
+    background: $whiteBg;
+    border-radius: 12px;
+    padding: 18px;
+    display: inline-block;
+    width: auto;
+    min-width: 240px;
+    margin-bottom: 56px;
+    margin-top: 40px;
+}
+
+.gradient0 {
+    background: linear-gradient(
+        to right,
+        #00b4db,
+        #0083b0
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.gradient1 {
+    background: linear-gradient(86deg, #c6ffdd, #fbd786, #f7797d);
+}
+
+.gradient2 {
+    background: linear-gradient(86deg, #0f2027, #203a43, #2c5364);
+}
+.gradient3 {
+    background: linear-gradient(86deg, #7f7fd5, #86a8e7, #91eae4);
+}
+.gradient4 {
+    background: linear-gradient(86deg, #8360c3, #2ebf91);
+}
+.gradient5 {
+    background: linear-gradient(86deg, #fdc830, #f37335);
+}
+.gradient6 {
+    background: linear-gradient(86deg, #005aa7, #fffde4);
+}
+.gradient7 {
+    background: linear-gradient(86deg, #89216b, #da4453);
+}
+.gradient8 {
+    background: linear-gradient(86deg, #a8c0ff, #3f2b96);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 18px;
+    padding: 18px 0;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    @media (max-width: 1300px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    @media (max-width: 1150px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 550px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.gridHeading {
+    margin-top: 0;
+    margin-bottom: 0;
+    background: $whiteBg;
+    border-radius: 12px;
+    padding: 6px 18px;
+    display: inline-block;
+    width: auto;
+}
+
+.pokemon {
+    background: $whiteBg;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.pokemonTitle {
+    margin-top: 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.familyID {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 14px;
+    padding: 3px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.nationalID {
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    padding: 3px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.pokemonImageRow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.pokemonImage {
+}

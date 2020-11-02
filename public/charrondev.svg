@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1057px" height="216px" viewBox="0 0 1057 216" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Charrondev Logo</title>
+    <defs>
+        <path d="M108,21 C59.9512268,21 21,59.9512268 21,108 C21,156.048773 59.9512268,195 108,195 C156.048773,195 195,156.048773 195,108 C195,59.9512268 156.048773,21 108,21 Z M108,63 C132.852814,63 153,83.1471863 153,108 C153,132.852814 132.852814,153 108,153 C83.1471863,153 63,132.852814 63,108 C63,83.1471863 83.1471863,63 108,63 Z" id="path-1"></path>
+        <filter x="-2.3%" y="-2.3%" width="104.6%" height="104.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="2" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feGaussianBlur stdDeviation="3" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.8 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <path d="M108,42 C71.5492065,42 42,71.5492065 42,108 C42,144.450793 71.5492065,174 108,174 C144.450793,174 174,144.450793 174,108 C174,71.5492065 144.450793,42 108,42 Z M108,63 C132.852814,63 153,83.1471863 153,108 C153,132.852814 132.852814,153 108,153 C83.1471863,153 63,132.852814 63,108 C63,83.1471863 83.1471863,63 108,63 Z" id="path-3"></path>
+        <filter x="-3.0%" y="-3.0%" width="106.1%" height="106.1%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="4" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.8 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Charrondev-Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Oval" fill-rule="nonzero">
+            <path d="M108,0 C48.353247,0 0,48.353247 0,108 C0,167.646753 48.353247,216 108,216 C167.646753,216 216,167.646753 216,108 C216,48.353247 167.646753,0 108,0 Z M108,63 C132.852814,63 153,83.1471863 153,108 C153,132.852814 132.852814,153 108,153 C83.1471863,153 63,132.852814 63,108 C63,83.1471863 83.1471863,63 108,63 Z" id="BG" fill="#FFFFFF"></path>
+            <g opacity="0.194591704">
+                <use fill="#000000" xlink:href="#path-1"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            </g>
+            <g opacity="0.194591704">
+                <use fill="#000000" xlink:href="#path-3"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+            </g>
+        </g>
+        <text id="CHARRON" font-family="Raleway-SemiBold, Raleway" font-size="100" font-weight="500" letter-spacing="9.67741935" fill="#FFFFFF">
+            <tspan x="276" y="144">CHARRON</tspan>
+        </text>
+        <g id="DEV" transform="translate(848.000000, 73.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M23.4764398,71 C28.582897,71 33.2085515,70.15 37.3534031,68.45 C41.4982548,66.75 45.0296684,64.35 47.947644,61.25 C50.8656195,58.15 53.1038394,54.4166667 54.6623037,50.05 C56.2207679,45.6833333 57,40.8 57,35.4 C57,30.5333333 56.3036649,25.95 54.9109948,21.65 C53.5183246,17.35 51.4293194,13.6 48.6439791,10.4 C45.8586387,7.2 42.3603839,4.66666667 38.1492147,2.8 C33.9380454,0.933333333 29.0471204,0 23.4764398,0 L23.4764398,0 L0,0 L0,71 L23.4764398,71 Z M23.4764398,66.4 L5.07329843,66.4 L5.07329843,4.6 L23.4764398,4.6 C28.052356,4.6 32.0977312,5.36666667 35.6125654,6.9 C39.1273997,8.43333333 42.0951134,10.5666667 44.5157068,13.3 C46.9363002,16.0333333 48.7766143,19.2833333 50.0366492,23.05 C51.2966841,26.8166667 51.9267016,30.9333333 51.9267016,35.4 C51.9267016,39.8 51.3132635,43.8833333 50.0863874,47.65 C48.8595113,51.4166667 47.052356,54.7 44.6649215,57.5 C42.2774869,60.3 39.3097731,62.4833333 35.7617801,64.05 C32.2137871,65.6166667 28.1186736,66.4 23.4764398,66.4 L23.4764398,66.4 Z" id="D"></path>
+            <path d="M121.938689,32 L121.938689,36.4571429 L86.0676533,36.4571429 L86.0676533,66.3402597 L128,66.3402597 L128,71 L81,71 L81,32 L121.938689,32 Z M127,0 L127,5 L81,5 L81,0 L127,0 Z" id="E"></path>
+            <polygon id="V" points="178.907407 71 209 0 203.583333 0 176.5 64.6 149.416667 0 144 0 174.192901 71"></polygon>
+        </g>
+    </g>
+</svg>
