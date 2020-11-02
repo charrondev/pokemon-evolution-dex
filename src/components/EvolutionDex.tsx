@@ -32,8 +32,34 @@ export function EvolutionDex(props: IProps) {
                 {grouped.map((group, i) => {
                     return <BoxGrid key={i} pokemon={group} />;
                 })}
+                <EmptyBox />
             </div>
         </>
+    );
+}
+
+function EmptyBox() {
+    const boxID = useBoxID();
+    const emptyArray = Array.from(new Array(30));
+    return (
+        <LayoutContainer>
+            <h3 className={styles.gridHeading}>
+                {`Box ${boxID + 1} (Empty)`}
+                <p>
+                    This is an empty box. It's recommended to use one to make
+                    adjusting things easier in case new forms are added.
+                </p>
+            </h3>
+            <div className={styles.grid}>
+                {emptyArray.map((_, i) => {
+                    return (
+                        <div key={i} className={styles.pokemon}>
+                            Placeholder
+                        </div>
+                    );
+                })}
+            </div>
+        </LayoutContainer>
     );
 }
 

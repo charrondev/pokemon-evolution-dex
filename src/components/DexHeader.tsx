@@ -36,6 +36,7 @@ export function DexHeader() {
                         const id = `#${region.toLowerCase()}`;
                         return (
                             <a
+                                key={id}
                                 className={
                                     styles.link +
                                     " " +

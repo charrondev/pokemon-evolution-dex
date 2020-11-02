@@ -9,7 +9,6 @@ import { EvolutionDex } from "../components/EvolutionDex";
 import { LayoutContainer } from "../components/LayoutContainer";
 import { usePokemonModel } from "../models/PokemonModel";
 import styles from "./index.module.scss";
-import Image from "next/image";
 
 const desription =
     "The Evolution Dex is an alternate method of organizing a living dex of pokemon that keeps evolution lines together, regardless of the generation they were introduced.";
