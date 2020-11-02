@@ -93,12 +93,13 @@ async function scrapeFamily(family: IDexFamily): Promise<IDexMon[]> {
 
         for (const image of images) {
             let name = normalizeName(image.getAttribute("alt"));
-            if (shouldIgnoreMon(name)) {
-                continue;
-            }
 
             if (!name.includes(baseName)) {
                 name = `${baseName} (${name})`;
+            }
+
+            if (shouldIgnoreMon(name)) {
+                continue;
             }
 
             const imageUrl = image.getAttribute("src");
