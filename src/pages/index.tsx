@@ -11,6 +11,9 @@ import { usePokemonModel } from "../models/PokemonModel";
 import styles from "./index.module.scss";
 import Image from "next/image";
 
+const desription =
+    "The Evolution Dex is an alternate method of organizing a living dex of pokemon that keeps evolution lines and different together, regardless of the generation they were introduced.";
+
 export default function Home() {
     const model = usePokemonModel();
     const regions = model.getRegionNames();
@@ -19,6 +22,7 @@ export default function Home() {
         <div className={styles.container}>
             <Head>
                 <title>Pokemon Evolution Dex</title>
+                <meta name="description" content={desription} />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className={styles.main}>
@@ -27,13 +31,7 @@ export default function Home() {
                     <div className={styles.textContent}>
                         <div>
                             <h2>What is the Evolution Dex?</h2>
-                            <p>
-                                The Evolution Dex is an alternate method of
-                                organizing a living dex of pokemon that keeps
-                                evolution lines and different together,
-                                regardless of the generation they were
-                                introduced.
-                            </p>
+                            <p>{desription}</p>
                             <p>
                                 By keeping pokemon of the same evolution line
                                 together, it can be easier to find pokemon in

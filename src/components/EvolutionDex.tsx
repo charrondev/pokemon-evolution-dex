@@ -26,7 +26,7 @@ export function EvolutionDex(props: IProps) {
             >
                 <LayoutContainer>
                     <h2 className={styles.wrapperTitle}>
-                        {regionName}-based Pokemon
+                        {regionName.trim()}-based Pokemon
                     </h2>
                 </LayoutContainer>
                 {grouped.map((group, i) => {
