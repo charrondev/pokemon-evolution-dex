@@ -65,7 +65,10 @@ export class PokemonModel {
     public search(keyword: string): string[] {
         return this.allPokemon
             .filter((poke) => {
-                return poke.name.toLowerCase().includes(keyword.toLowerCase());
+                return (
+                    poke.name.toLowerCase().includes(keyword.toLowerCase()) ||
+                    poke.name.toLowerCase() === keyword.toLowerCase()
+                );
             })
             .map((poke) => {
                 return poke.slug;
@@ -82,11 +85,28 @@ export class PokemonModel {
             const numberString = `${i + 1}`.padStart(3, "0");
             return {
                 ...mon,
-                slug: name.toLowerCase().replace(/\s/g, "-"),
+                slug: this.slugify(name),
                 imageUrl: finalImageUrl,
                 familyID: `${regionLetter} ${numberString}`,
             };
         });
+    }
+
+    /**
+     * Parse a string into a URL friendly format.
+     *
+     * Eg. Why Uber isn’t spelled Über -> why-uber-isnt-spelled-uber
+     *
+     * @param str The string to parse.
+     */
+    private slugify(str: string): string {
+        const whiteSpaceNormalizeRegexp = /[-\s]+/g;
+        return str
+            .normalize("NFD") // Normalize accented characters into ASCII equivalents
+            .replace(/[^\w\s$*_+~.()'"\-!:@]/g, "") // REmove characters that don't URL encode well
+            .trim() // Trim whitespace
+            .replace(whiteSpaceNormalizeRegexp, "-") // Normalize whitespace
+            .toLocaleLowerCase(); // Convert to locale aware lowercase.
     }
 }
 

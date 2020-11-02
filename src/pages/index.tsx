@@ -5,6 +5,7 @@
 
 import Head from "next/head";
 import { DexHeader } from "../components/DexHeader";
+import { SearchContext } from "../components/DexSearch";
 import { EvolutionDex } from "../components/EvolutionDex";
 import { LayoutContainer } from "../components/LayoutContainer";
 import { usePokemonModel } from "../models/PokemonModel";
@@ -53,16 +54,18 @@ export default function Home() {
                         </div>
                     </div>
                 </LayoutContainer>
-                <DexHeader />
-                {regions.map((region, i) => {
-                    return (
-                        <EvolutionDex
-                            regionName={region}
-                            key={region}
-                            gradient={i}
-                        />
-                    );
-                })}
+                <SearchContext>
+                    <DexHeader />
+                    {regions.map((region, i) => {
+                        return (
+                            <EvolutionDex
+                                regionName={region}
+                                key={region}
+                                gradient={i}
+                            />
+                        );
+                    })}
+                </SearchContext>
             </main>
 
             <footer className={styles.footer}>

@@ -45,6 +45,10 @@
     white-space: nowrap;
     width: auto;
     position: relative;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    border: none;
 
     &:first-child {
         font-weight: bold;
@@ -65,7 +69,9 @@
     }
 
     &:global(.isActive),
-    &:hover {
+    &:hover,
+    &:focus {
+        outline: none;
         &:after {
             opacity: 1;
         }
@@ -74,4 +80,9 @@
     &:global(.isActive) {
         font-weight: 600;
     }
+}
+
+.searchIcon {
+    height: 16px;
+    width: 16px;
 }

@@ -3,12 +3,15 @@
  * @license Proprietary
  */
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { usePokemonModel } from "../models/PokemonModel";
 import styles from "./DexHeader.module.scss";
+import { DexSearch } from "./DexSearch";
 import { LayoutContainer } from "./LayoutContainer";
+import classnames from "classnames";
 
 export function DexHeader() {
+    const [isSearchOpen, setSearchOpen] = useState(false);
     const model = usePokemonModel();
     const regions = model.getRegionNames();
     const [currentHash, setCurrentHash] = useState(
@@ -28,61 +31,56 @@ export function DexHeader() {
     return (
         <header className={styles.header}>
             <LayoutContainer>
-                <nav className={styles.links}>
-                    <a href={"#"} className={styles.link}>
-                        Evolution Dex
-                    </a>
-                    {regions.map((region) => {
-                        const id = `#${region.toLowerCase()}`;
-                        return (
-                            <a
-                                key={id}
-                                className={
-                                    styles.link +
-                                    " " +
-                                    (currentHash === id ? "isActive" : "")
-                                }
-                                href={id}
-                            >
-                                {region}
-                            </a>
-                        );
-                    })}
-                </nav>
+                {!isSearchOpen && (
+                    <nav className={styles.links}>
+                        <a href={"#"} className={styles.link}>
+                            Evolution Dex
+                        </a>
+                        {regions.map((region) => {
+                            const id = `#${region.toLowerCase()}`;
+                            return (
+                                <a
+                                    key={id}
+                                    className={
+                                        styles.link +
+                                        " " +
+                                        (currentHash === id ? "isActive" : "")
+                                    }
+                                    href={id}
+                                >
+                                    {region}
+                                </a>
+                            );
+                        })}
+                        <button
+                            className={styles.link}
+                            onClick={() => {
+                                setSearchOpen(true);
+                            }}
+                        >
+                            <SearchIcon className={styles.searchIcon} />
+                        </button>
+                    </nav>
+                )}
+                <DexSearch setIsOpen={setSearchOpen} isOpen={isSearchOpen} />
             </LayoutContainer>
         </header>
     );
 }
 
-function DexSearch() {
-    const [isActive, setIsActive] = useState(false);
-    const [searchTerm, setSearchTerm] = useState("");
-    const model = usePokemonModel();
-
-    useEffect(() => {
-        function handler(e: KeyboardEvent) {
-            if (e.ctrlKey && e.key === "k") {
-                setSearchTerm("");
-                if (isActive) {
-                    setIsActive(true);
-                } else {
-                    setIsActive(false);
-                }
-            }
-        }
-    });
-
-    const pokes = isActive && searchTerm ? model.search(searchTerm) : [];
-
+export function SearchIcon(props: { className?: string }) {
     return (
-        <div>
-            <input
-                type="text"
-                onChange={(e) => {
-                    setSearchTerm(e.target.value);
-                }}
-                value={searchTerm}
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 13.312 13.311"
+            className={props.className}
+        >
+            <title>Search</title>
+            <path
+                d="M5.193,1.143A4.059,4.059,0,1,0,9.267,5.2,4.059,4.059,0,0,0,5.193,1.143h0M13.043,13.08a1.019,1.019,0,0,1-1.349-.054L8.125,9.456A5.182,5.182,0,1,1,9.477,8.113l3.559,3.559a1.033,1.033,0,0,1,0,1.409Z"
+                transform="translate(-0.031 0.01)"
+                fill="currentColor"
             />
-        </div>
+        </svg>
     );
 }

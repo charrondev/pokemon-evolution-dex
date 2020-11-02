@@ -3,8 +3,10 @@
  * @license Proprietary
  */
 
-module.exports = {
+const withTM = require("next-transpile-modules");
+
+module.exports = withTM(["lodash-es"])({
     images: {
         domains: ["bulbapedia.bulbagarden.net", "cdn.bulbagarden.net"],
     },
-};
+});

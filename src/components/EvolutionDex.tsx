@@ -6,6 +6,7 @@
 import Image from "next/image";
 import React, { useMemo } from "react";
 import { IDexMonExtended, usePokemonInRegion } from "../models/PokemonModel";
+import { useSearchContext } from "./DexSearch";
 import styles from "./EvolutionDex.module.scss";
 import { LayoutContainer } from "./LayoutContainer";
 
@@ -79,8 +80,15 @@ function BoxGrid(props: { pokemon: IDexMonExtended[] }) {
 }
 
 function PokemonItem(props: IDexMonExtended) {
+    const { searchTerm } = useSearchContext();
+    const isSearched =
+        searchTerm &&
+        props.name.toLowerCase().includes(searchTerm.toLowerCase());
     return (
-        <div className={styles.pokemon} id={props.slug}>
+        <div
+            className={styles.pokemon + " " + (isSearched ? "isActive" : "")}
+            id={props.slug}
+        >
             <h3 className={styles.pokemonTitle}>
                 <a href={props.bulbapediaUrl}>{props.name}</a>
                 <span className={styles.familyID}>{props.familyID}</span>
