@@ -12,7 +12,7 @@ import styles from "./index.module.scss";
 import Image from "next/image";
 
 const desription =
-    "The Evolution Dex is an alternate method of organizing a living dex of pokemon that keeps evolution lines and different together, regardless of the generation they were introduced.";
+    "The Evolution Dex is an alternate method of organizing a living dex of pokemon that keeps evolution lines together, regardless of the generation they were introduced.";
 
 export default function Home() {
     const model = usePokemonModel();
