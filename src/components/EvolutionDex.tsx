@@ -71,8 +71,15 @@ function BoxGrid(props: { pokemon: IDexMonExtended[] }) {
         <LayoutContainer>
             <h3 className={styles.gridHeading}>{`Box ${boxID + 1}`}</h3>
             <div className={styles.grid}>
-                {pokemon.map((mon) => {
-                    return <PokemonItem {...mon} key={mon.familyID} />;
+                {pokemon.map((mon, i) => {
+                    return (
+                        <React.Fragment key={mon.familyID}>
+                            <PokemonItem {...mon} />
+                            {i % 6 === 5 && (
+                                <hr className={styles.rowSeparator} />
+                            )}
+                        </React.Fragment>
+                    );
                 })}
             </div>
         </LayoutContainer>

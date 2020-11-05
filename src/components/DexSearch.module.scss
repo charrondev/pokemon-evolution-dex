@@ -2,6 +2,9 @@
 .searchContainer {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 .searchInput {
@@ -22,7 +25,7 @@
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 0 0 0 2px rgba(0 ,0, 0, 0.1);
     padding: 6px 12px;
-    margin: 0 12px;
+    margin: 6px 12px;
 
     &:focus {
         outline: none;
@@ -32,11 +35,14 @@
 
 .counts {
     margin: 0 12px;
+    min-width: 200px;
+    text-align: center;
 }
 
 .buttons {
     display: flex;
     align-items: center;
+    margin: 6px 0;
 }
 
 .button {

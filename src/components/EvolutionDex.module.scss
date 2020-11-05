@@ -83,18 +83,10 @@ $whiteBg: transparentize($color: #fff, $amount: 0.5);
     margin-bottom: 40px;
 
     @media (max-width: 1300px) {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-
-    @media (max-width: 1150px) {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-    @media (max-width: 900px) {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 900px) {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -111,6 +103,8 @@ $whiteBg: transparentize($color: #fff, $amount: 0.5);
     padding: 9px 18px;
     display: inline-block;
     width: auto;
+    position: relative;
+    z-index: 100;
 
     & p {
         font-size: 18px;
@@ -145,6 +139,7 @@ $whiteBg: transparentize($color: #fff, $amount: 0.5);
     padding: 3px 9px;
     border-radius: 6px;
     white-space: nowrap;
+    margin-left: 12px;
 }
 
 .nationalID {
@@ -159,6 +154,22 @@ $whiteBg: transparentize($color: #fff, $amount: 0.5);
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+}
+
+.rowSeparator {
+    display: none;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    height: 1px;
+    @media (max-width: 1300px) {
+        grid-column: 1 / -1;
+        width: 100%;
+        display: block;
+
+        & ~ * {
+            grid-column: span;
+        }
+    }
 }
 
 .pokemonImage {
