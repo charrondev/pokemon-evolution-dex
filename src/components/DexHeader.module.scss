@@ -13,6 +13,16 @@
     -webkit-transform: translateZ(0);
 }
 
+.headerFixedBottom {
+    @media (max-width: 600px) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: initial;
+    }
+}
+
 .spacer {
     flex: 1;
 }

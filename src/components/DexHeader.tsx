@@ -30,7 +30,12 @@ export function DexHeader() {
     });
 
     return (
-        <header className={styles.header}>
+        <header
+            className={classNames(
+                styles.header,
+                isSearchOpen && styles.headerFixedBottom
+            )}
+        >
             <LayoutContainer>
                 {!isSearchOpen && (
                     <nav className={styles.links}>
