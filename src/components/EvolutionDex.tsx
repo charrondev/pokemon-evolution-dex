@@ -121,7 +121,7 @@ function PokemonItem(props: IDexMonExtended) {
             id={props.slug}
         >
             <h3 className={styles.pokemonTitle}>
-                <span href={props.bulbapediaUrl}>{props.name}</span>
+                <a href={props.bulbapediaUrl}>{props.name}</a>
             </h3>
             <div className={styles.pokemonImageRow}>
                 <Image
