@@ -29,6 +29,14 @@ export function DexHeader() {
         };
     });
 
+    useEffect(() => {
+        if (isSearchOpen) {
+            document.body.classList.add("noScroll");
+        } else {
+            document.body.classList.remove("noScroll");
+        }
+    }, [isSearchOpen]);
+
     return (
         <header
             className={classNames(
