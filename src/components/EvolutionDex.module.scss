@@ -108,7 +108,8 @@ $whiteBg: transparentize($color: #fff, $amount: 0.5);
     padding: 6px 18px;
     display: inline-block;
     width: auto;
-    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: saturate(180%) blur(5px);
+    backdrop-filter: saturate(180%) blur(5px);
     min-width: 140px;
 
     & p {
@@ -214,4 +215,6 @@ $whiteBg: transparentize($color: #fff, $amount: 0.5);
 }
 
 .pokemonImage {
+    width: 65px;
+    height: 65px;
 }
