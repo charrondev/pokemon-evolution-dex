@@ -29,8 +29,3 @@ body,
 .contents {
     display: contents;
 }
-
-.noScroll {
-    max-height: 100vh;
-    overflow: hidden;
-}
