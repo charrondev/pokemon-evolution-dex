@@ -2,9 +2,14 @@
 .searchContainer {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     flex-wrap: wrap;
     padding-top: 6px;
     padding-bottom: 6px;
+
+    @media (max-width: 600px) {
+        justify-content: flex-start;
+    }
 }
 
 .searchInput {
@@ -18,8 +23,8 @@
     display: block;
     width: 600px;
     max-width: 100%;
-    height: 36px;
-    line-height: 36px;
+    height: 32px;
+    line-height: 32px;
     border-radius: 6px;
     color: rgba(0, 0, 0, 0.8);
     background: rgba(255, 255, 255, 0.7);
@@ -31,18 +36,47 @@
         outline: none;
         box-shadow: 0 0 0 2px rgba(0 ,0, 0, 0.3);
     }
+
+    @media (max-width: 1050px) {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    @media (max-width: 800px) {
+        width: 100%;
+        margin-left: 160px;
+    }
+
+    @media (max-width: 600px) {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 56px;
+    }
 }
 
 .counts {
     margin: 0 12px;
-    min-width: 200px;
+    min-width: 140px;
     text-align: center;
+
+    @media (max-width: 600px) {
+        text-align: start;
+        margin-left: 0;
+    }
 }
 
 .buttons {
     display: flex;
     align-items: center;
     margin: 6px 0;
+
+    @media (max-width: 600px) {
+        margin-right: 0;
+        justify-content: flex-end;
+        flex: 1;
+    }
 }
 
 .button {
@@ -55,11 +89,41 @@
     padding: 9px 16px;
     cursor: pointer;
 
+    @media (max-width: 600px) {
+        margin-right: 0;
+    }
 
     &:hover,
     &:active,
     &:focus {
         outline: none;
         box-shadow: 0 0 0 2px rgba(0 ,0, 0, 0.3);
+    }
+}
+
+.closeButton {
+    appearance: none;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    margin: 0 12px;
+    margin-right: -6px;
+    width:28px;
+    height:28px;
+    cursor: pointer;
+
+
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+        background: rgba(0 ,0, 0, 0.08);
+        box-shadow: 0 0 0 2px rgba(0 ,0, 0, 0.2);
+    }
+
+    @media (max-width: 600px) {
+        position: absolute;
+        top: 18px;
+        right: 24px;
     }
 }

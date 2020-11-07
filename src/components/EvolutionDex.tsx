@@ -3,9 +3,14 @@
  * @license Proprietary
  */
 
+import classNames from "classnames";
 import Image from "next/image";
 import React, { useMemo } from "react";
-import { IDexMonExtended, usePokemonInRegion } from "../models/PokemonModel";
+import {
+    IDexMonExtended,
+    usePokemonInRegion,
+    usePokemonModel,
+} from "../models/PokemonModel";
 import { useSearchContext } from "./DexSearch";
 import styles from "./EvolutionDex.module.scss";
 import { LayoutContainer } from "./LayoutContainer";
@@ -19,6 +24,7 @@ export function EvolutionDex(props: IProps) {
     const { regionName, gradient } = props;
     const mons = usePokemonInRegion(regionName);
     const grouped = breakIntoGroups(mons, 30);
+    const region = mons[0].regionName;
     return (
         <>
             <div
@@ -27,25 +33,26 @@ export function EvolutionDex(props: IProps) {
             >
                 <LayoutContainer>
                     <h2 className={styles.wrapperTitle}>
-                        {regionName.trim()}-based Pokemon
+                        {regionName.trim()} Pokemon
                     </h2>
                 </LayoutContainer>
                 {grouped.map((group, i) => {
-                    return <BoxGrid key={i} pokemon={group} />;
+                    return <BoxGrid key={i} pokemon={group} region={region} />;
                 })}
-                <EmptyBox />
+                <EmptyBox region={region} />
             </div>
         </>
     );
 }
 
-function EmptyBox() {
-    const boxID = useBoxID();
+function EmptyBox(props: { region: string }) {
     const emptyArray = Array.from(new Array(30));
+    const model = usePokemonModel();
+    const regionKey = model.getRegionKey(props.region);
     return (
         <LayoutContainer>
-            <h3 className={styles.gridHeading}>
-                {`Box ${boxID + 1} (Empty)`}
+            <h3 className={classNames(styles.gridHeading)}>
+                {`${regionKey}-Extras`}
                 <p>
                     This is an empty box. It's recommended to use one to make
                     adjusting things easier in case new forms are added.
@@ -64,19 +71,36 @@ function EmptyBox() {
     );
 }
 
-function BoxGrid(props: { pokemon: IDexMonExtended[] }) {
-    const { pokemon } = props;
-    const boxID = useBoxID();
+function BoxGrid(props: { pokemon: IDexMonExtended[]; region: string }) {
+    const { pokemon, region } = props;
+    const boxID = useBoxID(region);
+    const model = usePokemonModel();
+    const regionKey = model.getRegionKey(region);
+    const boxStart = 30 * (boxID - 1) + 1;
+    const boxEnd = boxStart + 30;
+
     return (
         <LayoutContainer>
-            <h3 className={styles.gridHeading}>{`Box ${boxID + 1}`}</h3>
+            <h3
+                className={classNames(
+                    styles.gridHeading,
+                    styles.gridHeadingSticky
+                )}
+            >{`${regionKey} ${boxStart
+                .toString()
+                .padStart(3, "0")}-${boxEnd.toString().padStart(3, "0")}`}</h3>
             <div className={styles.grid}>
                 {pokemon.map((mon, i) => {
                     return (
                         <React.Fragment key={mon.familyID}>
                             <PokemonItem {...mon} />
                             {i % 6 === 5 && (
-                                <hr className={styles.rowSeparator} />
+                                <div className={styles.rowSeparator}>
+                                    <label>
+                                        Row {Math.round((i + 1) / 6) + 1}
+                                    </label>
+                                    <hr />
+                                </div>
                             )}
                         </React.Fragment>
                     );
@@ -97,18 +121,22 @@ function PokemonItem(props: IDexMonExtended) {
             id={props.slug}
         >
             <h3 className={styles.pokemonTitle}>
-                <a href={props.bulbapediaUrl}>{props.name}</a>
-                <span className={styles.familyID}>{props.familyID}</span>
+                <span href={props.bulbapediaUrl}>{props.name}</span>
             </h3>
             <div className={styles.pokemonImageRow}>
                 <Image
                     className={styles.pokemonImage}
                     src={props.imageUrl}
-                    width={80}
-                    height={80}
+                    width={65}
+                    height={65}
                     alt={props.name}
                 />
-                <span className={styles.nationalID}>#{props.nationalID}</span>
+                <div className={styles.pokemonIDs}>
+                    <span className={styles.familyID}>{props.familyID}</span>
+                    <span className={styles.nationalID}>
+                        #{props.nationalID}
+                    </span>
+                </div>
             </div>
         </div>
     );
@@ -136,10 +164,14 @@ function breakIntoGroups<T>(items: T[], size: number): T[][] {
     return result;
 }
 
-let i = 0;
+const boxes: Record<string, number> = {};
 
-function useBoxID() {
+function useBoxID(region: string) {
     return useMemo(() => {
-        return i++;
-    }, []);
+        if (!boxes[region]) {
+            boxes[region] = 1;
+        }
+
+        return boxes[region]++;
+    }, [region]);
 }

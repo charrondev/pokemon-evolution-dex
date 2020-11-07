@@ -5455,7 +5455,7 @@
     },
     {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Darmanitan_(Pok%C3%A9mon)",
-        "name": "Darmanitan (Standard Mode)",
+        "name": "Darmanitan",
         "nationalID": 555,
         "familyName": "Darumaka family",
         "color": "#F08030",
@@ -5464,38 +5464,11 @@
     },
     {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Darmanitan_(Pok%C3%A9mon)",
-        "name": "Darmanitan (Galarian Standard Mode)",
+        "name": "Galarian Darmanitan",
         "nationalID": 555,
         "familyName": "Darumaka family",
         "color": "#F08030",
         "imageUrl": "//cdn.bulbagarden.net/upload/thumb/6/60/555Darmanitan-Galar.png/110px-555Darmanitan-Galar.png",
-        "regionName": "Unova"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Darmanitan_(Pok%C3%A9mon)",
-        "name": "Darmanitan (Zen Mode)",
-        "nationalID": 555,
-        "familyName": "Darumaka family",
-        "color": "#F08030",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/f/fe/555Darmanitan-Zen.png/110px-555Darmanitan-Zen.png",
-        "regionName": "Unova"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Darmanitan_(Pok%C3%A9mon)",
-        "name": "Darmanitan (Galarian Zen Mode)",
-        "nationalID": 555,
-        "familyName": "Darumaka family",
-        "color": "#F08030",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/9/91/555Darmanitan-Galar-Zen.png/110px-555Darmanitan-Galar-Zen.png",
-        "regionName": "Unova"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Darmanitan_(Pok%C3%A9mon)",
-        "name": "Darmanitan (Galarian Zen Mode)",
-        "nationalID": 555,
-        "familyName": "Darumaka family",
-        "color": "#F08030",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/9/91/555Darmanitan-Galar-Zen.png/110px-555Darmanitan-Galar-Zen.png",
         "regionName": "Unova"
     },
     {
@@ -5770,7 +5743,7 @@
     },
     {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Deerling_(Pok%C3%A9mon)",
-        "name": "Deerling (Spring Form)",
+        "name": "Deerling",
         "nationalID": 585,
         "familyName": "Deerling family",
         "color": "#A8A878",
@@ -5779,7 +5752,7 @@
     },
     {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Sawsbuck_(Pok%C3%A9mon)",
-        "name": "Sawsbuck (Spring Form)",
+        "name": "Sawsbuck",
         "nationalID": 586,
         "familyName": "Deerling family",
         "color": "#A8A878",
@@ -6283,7 +6256,7 @@
     },
     {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Tornadus_(Pok%C3%A9mon)",
-        "name": "Tornadus (Incarnate Forme)",
+        "name": "Tornadus",
         "nationalID": 641,
         "familyName": "Tornadus family",
         "color": "#A890F0",
@@ -6292,7 +6265,7 @@
     },
     {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Thundurus_(Pok%C3%A9mon)",
-        "name": "Thundurus (Incarnate Forme)",
+        "name": "Thundurus",
         "nationalID": 642,
         "familyName": "Thundurus family",
         "color": "#F8D030",
@@ -6319,7 +6292,7 @@
     },
     {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Landorus_(Pok%C3%A9mon)",
-        "name": "Landorus (Incarnate Forme)",
+        "name": "Landorus",
         "nationalID": 645,
         "familyName": "Landorus family",
         "color": "#E0C068",
@@ -6336,24 +6309,6 @@
         "regionName": "Unova"
     },
     {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Kyurem_(Pok%C3%A9mon)",
-        "name": "White Kyurem",
-        "nationalID": 646,
-        "familyName": "Kyurem family",
-        "color": "#7038F8",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/8/81/646Kyurem-White.png/110px-646Kyurem-White.png",
-        "regionName": "Unova"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Kyurem_(Pok%C3%A9mon)",
-        "name": "Black Kyurem",
-        "nationalID": 646,
-        "familyName": "Kyurem family",
-        "color": "#7038F8",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/1/16/646Kyurem-Black.png/110px-646Kyurem-Black.png",
-        "regionName": "Unova"
-    },
-    {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Keldeo_(Pok%C3%A9mon)",
         "name": "Keldeo (Ordinary Form)",
         "nationalID": 647,
@@ -6364,7 +6319,7 @@
     },
     {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Meloetta_(Pok%C3%A9mon)",
-        "name": "Meloetta (Aria Forme)",
+        "name": "Meloetta",
         "nationalID": 648,
         "familyName": "Meloetta family",
         "color": "#A8A878",
@@ -6949,20 +6904,11 @@
     },
     {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Xerneas_(Pok%C3%A9mon)",
-        "name": "Xerneas (Active Mode)",
+        "name": "Xerneas",
         "nationalID": 716,
         "familyName": "Xerneas family",
         "color": "#EE99AC",
         "imageUrl": "//cdn.bulbagarden.net/upload/thumb/1/13/716Xerneas.png/250px-716Xerneas.png",
-        "regionName": "Kalos"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Xerneas_(Pok%C3%A9mon)",
-        "name": "Xerneas (Neutral Mode)",
-        "nationalID": 716,
-        "familyName": "Xerneas family",
-        "color": "#EE99AC",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/e/ef/HOME716N.png/110px-HOME716N.png",
         "regionName": "Kalos"
     },
     {
@@ -6976,7 +6922,7 @@
     },
     {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Zygarde_(Pok%C3%A9mon)",
-        "name": "Zygarde (50% Forme)",
+        "name": "Zygarde",
         "nationalID": 718,
         "familyName": "Zygarde family",
         "color": "#7038F8",
@@ -6994,16 +6940,7 @@
     },
     {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Hoopa_(Pok%C3%A9mon)",
-        "name": "Hoopa Confined",
-        "nationalID": 720,
-        "familyName": "Hoopa family",
-        "color": "#F85888",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/f/fb/720Hoopa.png/250px-720Hoopa.png",
-        "regionName": "Kalos"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Hoopa_(Pok%C3%A9mon)",
-        "name": "Hoopa Unbound",
+        "name": "Hoopa",
         "nationalID": 720,
         "familyName": "Hoopa family",
         "color": "#F85888",
@@ -7264,7 +7201,7 @@
     },
     {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Lycanroc_(Pok%C3%A9mon)",
-        "name": "Lycanroc (Midday Form)",
+        "name": "Lycanroc",
         "nationalID": 745,
         "familyName": "Rockruff family",
         "color": "#B8A038",
@@ -7273,7 +7210,7 @@
     },
     {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Wishiwashi_(Pok%C3%A9mon)",
-        "name": "Wishiwashi (Solo Form)",
+        "name": "Wishiwashi",
         "nationalID": 746,
         "familyName": "Wishiwashi family",
         "color": "#6890F0",
@@ -7525,7 +7462,7 @@
     },
     {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Minior_(Pok%C3%A9mon)",
-        "name": "Minior (Meteor Form)",
+        "name": "Minior",
         "nationalID": 774,
         "familyName": "Minior family",
         "color": "#B8A038",
@@ -7561,7 +7498,7 @@
     },
     {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Mimikyu_(Pok%C3%A9mon)",
-        "name": "Mimikyu (Disguised Form)",
+        "name": "Mimikyu",
         "nationalID": 778,
         "familyName": "Mimikyu family",
         "color": "#705898",
@@ -7767,57 +7704,12 @@
         "regionName": "Alola"
     },
     {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Necrozma_(Pok%C3%A9mon)",
-        "name": "Dusk Mane Necrozma",
-        "nationalID": 800,
-        "familyName": "Necrozma family",
-        "color": "#F85888",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/8/80/800Necrozma-Dusk_Mane.png/110px-800Necrozma-Dusk_Mane.png",
-        "regionName": "Alola"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Necrozma_(Pok%C3%A9mon)",
-        "name": "Dawn Wings Necrozma",
-        "nationalID": 800,
-        "familyName": "Necrozma family",
-        "color": "#F85888",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/7/7a/800Necrozma-Dawn_Wings.png/110px-800Necrozma-Dawn_Wings.png",
-        "regionName": "Alola"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Necrozma_(Pok%C3%A9mon)",
-        "name": "Ultra Necrozma",
-        "nationalID": 800,
-        "familyName": "Necrozma family",
-        "color": "#F85888",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/8/8b/800Necrozma-Ultra.png/110px-800Necrozma-Ultra.png",
-        "regionName": "Alola"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Necrozma_(Pok%C3%A9mon)",
-        "name": "Ultra Necrozma",
-        "nationalID": 800,
-        "familyName": "Necrozma family",
-        "color": "#F85888",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/8/8b/800Necrozma-Ultra.png/110px-800Necrozma-Ultra.png",
-        "regionName": "Alola"
-    },
-    {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Magearna_(Pok%C3%A9mon)",
         "name": "Magearna",
         "nationalID": 801,
         "familyName": "Magearna family",
         "color": "#B8B8D0",
         "imageUrl": "//cdn.bulbagarden.net/upload/thumb/0/0a/801Magearna.png/250px-801Magearna.png",
-        "regionName": "Alola"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Magearna_(Pok%C3%A9mon)",
-        "name": "Original Color Magearna",
-        "nationalID": 801,
-        "familyName": "Magearna family",
-        "color": "#B8B8D0",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/4/4c/HOME801O.png/110px-HOME801O.png",
         "regionName": "Alola"
     },
     {
@@ -8416,20 +8308,11 @@
     },
     {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Eiscue_(Pok%C3%A9mon)",
-        "name": "Eiscue (Ice Face)",
+        "name": "Eiscue",
         "nationalID": 875,
         "familyName": "Eiscue family",
         "color": "#98D8D8",
         "imageUrl": "//cdn.bulbagarden.net/upload/thumb/9/9b/875Eiscue-Ice.png/250px-875Eiscue-Ice.png",
-        "regionName": "Galar"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Eiscue_(Pok%C3%A9mon)",
-        "name": "Eiscue (Noice Face)",
-        "nationalID": 875,
-        "familyName": "Eiscue family",
-        "color": "#98D8D8",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/2/27/875Eiscue-Noice.png/110px-875Eiscue-Noice.png",
         "regionName": "Galar"
     },
     {
@@ -8442,30 +8325,12 @@
         "regionName": "Galar"
     },
     {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Indeedee_(Pok%C3%A9mon)",
-        "name": "Female Indeedee",
-        "nationalID": 876,
-        "familyName": "Indeedee family",
-        "color": "#F85888",
-        "imageUrl": "//cdn.bulbagarden.net/upload/2/2b/000.png",
-        "regionName": "Galar"
-    },
-    {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Morpeko_(Pok%C3%A9mon)",
-        "name": "Morpeko (Full Belly Mode)",
+        "name": "Morpeko",
         "nationalID": 877,
         "familyName": "Morpeko family",
         "color": "#F8D030",
         "imageUrl": "//cdn.bulbagarden.net/upload/thumb/d/df/877Morpeko-Full.png/250px-877Morpeko-Full.png",
-        "regionName": "Galar"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Morpeko_(Pok%C3%A9mon)",
-        "name": "Morpeko (Hangry Mode)",
-        "nationalID": 877,
-        "familyName": "Morpeko family",
-        "color": "#F8D030",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/d/df/877Morpeko-Hangry.png/110px-877Morpeko-Hangry.png",
         "regionName": "Galar"
     },
     {
@@ -8560,7 +8425,7 @@
     },
     {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Zacian_(Pok%C3%A9mon)",
-        "name": "Zacian (Hero of Many Battles)",
+        "name": "Zacian",
         "nationalID": 888,
         "familyName": "Zacian family",
         "color": "#EE99AC",
@@ -8568,30 +8433,12 @@
         "regionName": "Galar"
     },
     {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Zacian_(Pok%C3%A9mon)",
-        "name": "Zacian (Crowned Sword)",
-        "nationalID": 888,
-        "familyName": "Zacian family",
-        "color": "#EE99AC",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/c/ca/888Zacian.png/110px-888Zacian.png",
-        "regionName": "Galar"
-    },
-    {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Zamazenta_(Pok%C3%A9mon)",
-        "name": "Zamazenta (Hero of Many Battles)",
+        "name": "Zamazenta",
         "nationalID": 889,
         "familyName": "Zamazenta family",
         "color": "#C03028",
         "imageUrl": "//cdn.bulbagarden.net/upload/thumb/9/97/889Zamazenta-Hero.png/250px-889Zamazenta-Hero.png",
-        "regionName": "Galar"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Zamazenta_(Pok%C3%A9mon)",
-        "name": "Zamazenta (Crowned Shield)",
-        "nationalID": 889,
-        "familyName": "Zamazenta family",
-        "color": "#C03028",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/7/72/889Zamazenta.png/110px-889Zamazenta.png",
         "regionName": "Galar"
     },
     {
@@ -8601,15 +8448,6 @@
         "familyName": "Eternatus family",
         "color": "#A040A0",
         "imageUrl": "//cdn.bulbagarden.net/upload/thumb/6/62/890Eternatus.png/250px-890Eternatus.png",
-        "regionName": "Galar"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Eternatus_(Pok%C3%A9mon)",
-        "name": "Eternamax Eternatus",
-        "nationalID": 890,
-        "familyName": "Eternatus family",
-        "color": "#A040A0",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/7/76/HOME890E.png/110px-HOME890E.png",
         "regionName": "Galar"
     },
     {
@@ -8623,20 +8461,11 @@
     },
     {
         "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Urshifu_(Pok%C3%A9mon)",
-        "name": "Urshifu (Single Strike Style)",
+        "name": "Urshifu",
         "nationalID": 892,
         "familyName": "Kubfu family",
         "color": "#C03028",
         "imageUrl": "//cdn.bulbagarden.net/upload/thumb/e/e7/892Urshifu-Single_Strike.png/250px-892Urshifu-Single_Strike.png",
-        "regionName": "Galar"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Urshifu_(Pok%C3%A9mon)",
-        "name": "Urshifu (Rapid Strike Style)",
-        "nationalID": 892,
-        "familyName": "Kubfu family",
-        "color": "#C03028",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/3/38/892Urshifu-Rapid_Strike.png/110px-892Urshifu-Rapid_Strike.png",
         "regionName": "Galar"
     },
     {
@@ -8646,15 +8475,6 @@
         "familyName": "Zarude family",
         "color": "#705848",
         "imageUrl": "//cdn.bulbagarden.net/upload/thumb/a/a5/893Zarude.png/250px-893Zarude.png",
-        "regionName": "Galar"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Zarude_(Pok%C3%A9mon)",
-        "name": "Dada Zarude",
-        "nationalID": 893,
-        "familyName": "Zarude family",
-        "color": "#705848",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/c/c7/HOME893D.png/110px-HOME893D.png",
         "regionName": "Galar"
     },
     {
@@ -8700,24 +8520,6 @@
         "familyName": "Calyrex family",
         "color": "#F85888",
         "imageUrl": "//cdn.bulbagarden.net/upload/thumb/3/3c/898Calyrex.png/250px-898Calyrex.png",
-        "regionName": "Galar"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Calyrex_(Pok%C3%A9mon)",
-        "name": "Ice Rider Calyrex",
-        "nationalID": 898,
-        "familyName": "Calyrex family",
-        "color": "#F85888",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/2/20/HOME898I.png/110px-HOME898I.png",
-        "regionName": "Galar"
-    },
-    {
-        "bulbapediaUrl": "https://bulbapedia.bulbagarden.net/wiki/Calyrex_(Pok%C3%A9mon)",
-        "name": "Shadow Rider Calyrex",
-        "nationalID": 898,
-        "familyName": "Calyrex family",
-        "color": "#F85888",
-        "imageUrl": "//cdn.bulbagarden.net/upload/thumb/f/f2/HOME898S.png/110px-HOME898S.png",
         "regionName": "Galar"
     },
     {

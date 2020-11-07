@@ -29,6 +29,18 @@ export interface IDexMonExtended extends IDexMon {
     slug: string;
 }
 
+const RegionKeys = {
+    kanto: "K",
+    johto: "J",
+    hoenn: "H",
+    sinnoh: "S",
+    unova: "U",
+    kalos: "KS",
+    alola: "A",
+    galar: "G",
+    other: "O",
+};
+
 export class PokemonModel {
     private familiesByName: Map<string, IDexFamily> = new Map();
     private pokemonByRegion: Map<string, IDexMon[]> = new Map();
@@ -75,10 +87,14 @@ export class PokemonModel {
             });
     }
 
+    public getRegionKey(region: string) {
+        return RegionKeys[region.toLowerCase()] ?? "O";
+    }
+
     private applyFamilyIDs(dexMon: IDexMon[]): IDexMonExtended[] {
         return dexMon.map((mon, i) => {
             const { regionName, imageUrl, name } = mon;
-            const regionLetter = regionName.charAt(0).toUpperCase();
+            const regionLetter = this.getRegionKey(regionName);
             const finalImageUrl = imageUrl.startsWith("//")
                 ? `https:${imageUrl}`
                 : imageUrl;

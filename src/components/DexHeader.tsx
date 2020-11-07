@@ -9,6 +9,7 @@ import styles from "./DexHeader.module.scss";
 import { DexSearch } from "./DexSearch";
 import { LayoutContainer } from "./LayoutContainer";
 import classnames from "classnames";
+import classNames from "classnames";
 
 export function DexHeader() {
     const [isSearchOpen, setSearchOpen] = useState(false);
@@ -52,8 +53,12 @@ export function DexHeader() {
                                 </a>
                             );
                         })}
+                        <span className={styles.spacer}></span>
                         <button
-                            className={styles.link}
+                            className={classNames(
+                                styles.link,
+                                styles.searchButton
+                            )}
                             onClick={() => {
                                 setSearchOpen(true);
                             }}
