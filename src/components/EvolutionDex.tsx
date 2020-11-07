@@ -80,33 +80,36 @@ function BoxGrid(props: { pokemon: IDexMonExtended[]; region: string }) {
     const boxEnd = boxStart + 30;
 
     return (
-        <LayoutContainer>
-            <h3
-                className={classNames(
-                    styles.gridHeading,
-                    styles.gridHeadingSticky
-                )}
-            >{`${regionKey} ${boxStart
-                .toString()
-                .padStart(3, "0")}-${boxEnd.toString().padStart(3, "0")}`}</h3>
-            <div className={styles.grid}>
-                {pokemon.map((mon, i) => {
-                    return (
-                        <React.Fragment key={mon.familyID}>
-                            <PokemonItem {...mon} />
-                            {i % 6 === 5 && (
-                                <div className={styles.rowSeparator}>
-                                    <label>
-                                        Row {Math.round((i + 1) / 6) + 1}
-                                    </label>
-                                    <hr />
-                                </div>
-                            )}
-                        </React.Fragment>
-                    );
-                })}
-            </div>
-        </LayoutContainer>
+        <>
+            <LayoutContainer className={styles.gridHeadingSticky}>
+                <h3
+                    className={classNames(styles.gridHeading)}
+                >{`${regionKey} ${boxStart
+                    .toString()
+                    .padStart(3, "0")}-${boxEnd
+                    .toString()
+                    .padStart(3, "0")}`}</h3>
+            </LayoutContainer>
+            <LayoutContainer>
+                <div className={styles.grid}>
+                    {pokemon.map((mon, i) => {
+                        return (
+                            <React.Fragment key={mon.familyID}>
+                                <PokemonItem {...mon} />
+                                {i % 6 === 5 && (
+                                    <div className={styles.rowSeparator}>
+                                        <label>
+                                            Row {Math.round((i + 1) / 6) + 1}
+                                        </label>
+                                        <hr />
+                                    </div>
+                                )}
+                            </React.Fragment>
+                        );
+                    })}
+                </div>
+            </LayoutContainer>
+        </>
     );
 }
 

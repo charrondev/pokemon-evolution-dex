@@ -3,9 +3,15 @@
  * @license Proprietary
  */
 
+import classNames from "classnames";
 import React from "react";
 import styles from "./LayoutContainer.module.scss";
 
 export function LayoutContainer(props: React.HTMLAttributes<HTMLDivElement>) {
-    return <div {...props} className={styles.container} />;
+    return (
+        <div
+            {...props}
+            className={classNames(styles.container, props.className)}
+        />
+    );
 }

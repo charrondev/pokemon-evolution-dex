@@ -36,5 +36,6 @@
         "terminal-kit": "^1.44.0",
         "ts-node": "^9.0.0",
         "typescript": "^4.0.5"
-    }
+    },
+    "browserslist": [">0.3%", "not ie 11", "not dead", "not op_mini all"]
 }

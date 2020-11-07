@@ -12,7 +12,6 @@ $whiteBg: transparentize($color: #fff, $amount: 0.5);
 .wrapper {
     width: 100%;
     padding: 24px 0;
-    display: block;
 
     &:before {
         display: block;
@@ -104,8 +103,8 @@ $whiteBg: transparentize($color: #fff, $amount: 0.5);
     margin-bottom: 0;
     background: rgba(0,0,0,0.5);
     color: white;
-    border-radius: 12px;
-    padding: 6px 18px;
+    border-radius: 9px;
+    padding: 3px 18px;
     display: inline-block;
     width: auto;
     -webkit-backdrop-filter: saturate(180%) blur(5px);
