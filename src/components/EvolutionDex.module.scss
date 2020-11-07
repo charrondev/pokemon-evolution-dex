@@ -123,6 +123,7 @@ $whiteBg: transparentize($color: #fff, $amount: 0.5);
     position: sticky;
     top: 10px;
     z-index: 100;
+    pointer-events: none;
 }
 
 .pokemon {
