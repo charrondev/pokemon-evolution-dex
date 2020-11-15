@@ -51,12 +51,11 @@ export function ClientUserContext(props: { children: React.ReactNode }) {
                 }
 
                 if (!isDirty.current) {
-                    console.log("not dirty, not setting");
                     return;
                 }
 
-                console.log("persisting storage");
                 localStorage.setItem(LOCAL_STORAGE_NAME, JSON.stringify(user));
+                isDirty.current = false;
             },
             5000,
             { leading: true }
@@ -71,7 +70,6 @@ export function ClientUserContext(props: { children: React.ReactNode }) {
             caughtFamilyIDs: caughtFamilyIDs,
             version: 1,
         };
-        console.log("Running change effect");
         stashUser(user);
     }, [userName, caughtFamilyIDs]);
 
@@ -121,4 +119,93 @@ export function usePokemonCaught() {
     }
 
     return { setPokemonCaught, isPokemonCaught };
+}
+
+export function useRemotePersist() {
+    const {
+        caughtFamilyIDs,
+        setCaughtFamilyIDs,
+        setUserName,
+        userName,
+    } = useContext(clientContext);
+    const [isLoading, setIsLoading] = useState(false);
+    const [loadingError, setLoadingError] = useState<Error | null>(null);
+    const [isSaving, setIsSaving] = useState(false);
+    const [savingError, setSavingError] = useState<Error | null>(null);
+
+    async function persistUser(name: string) {
+        setLoadingError(null);
+        setIsLoading(false);
+        if (name.length < 6) {
+            setIsSaving(false);
+            setSavingError(new Error("UserID must be at least 6 characters"));
+            return;
+        }
+
+        setIsSaving(true);
+        setSavingError(null);
+
+        const slug = encodeURIComponent(name);
+        const response = await fetch(`/api/users/${slug}`, {
+            method: "PUT",
+            body: JSON.stringify({
+                nameSlug: name,
+                caughtFamilyIDs,
+            }),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+
+        setIsSaving(false);
+        const json = await response.json();
+        if (response.status !== 200) {
+            setSavingError(new Error("Failed to save user"));
+            console.error(json);
+            return;
+        }
+
+        await loadUser(name);
+    }
+
+    async function loadUser(name: string) {
+        setSavingError(null);
+        setIsSaving(false);
+        setLoadingError(null);
+        setIsLoading(true);
+        const slug = encodeURIComponent(name);
+        const response = await fetch(`/api/users/${slug}`);
+        if (response.status == 404) {
+            setIsLoading(false);
+            setLoadingError(new Error("Could not find user."));
+            return null;
+        }
+        const json: IUser = await response.json();
+        setIsLoading(false);
+        if (response.status >= 400) {
+            console.error("Failed to load user", json);
+            setLoadingError(new Error("Failed to load user."));
+            return;
+        }
+
+        setUserName(json.nameSlug);
+        setCaughtFamilyIDs(json.caughtFamilyIDs);
+    }
+
+    return {
+        loadUser,
+        persistUser,
+        loadRemote: {
+            error: loadingError,
+            loading: isLoading,
+        },
+        saveRemote: {
+            error: savingError,
+            loading: isSaving,
+        },
+        local: {
+            userName,
+            caughtFamilyIDs,
+        },
+    };
 }

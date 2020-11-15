@@ -4,10 +4,12 @@
  */
 
 import Head from "next/head";
+import React from "react";
 import { DexHeader } from "../components/DexHeader";
 import { SearchContext } from "../components/DexSearch";
 import { EvolutionDex } from "../components/EvolutionDex";
 import { LayoutContainer } from "../components/LayoutContainer";
+import { PersistMessage } from "../components/PersistMessage";
 import { usePokemonModel } from "../models/PokemonModel";
 import styles from "./index.module.scss";
 
@@ -53,6 +55,7 @@ export default function Home() {
                             </p>
                         </div>
                     </div>
+                    <PersistMessage />
                 </LayoutContainer>
                 <SearchContext>
                     <DexHeader />

@@ -1,0 +1,66 @@
+.textContent {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.5;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    padding: 0 24px;
+}
+
+.row {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+@mixin input {
+    appearance: none;
+    line-height: 32px;
+    height: 32px;
+    vertical-align: middle;
+    border: none;
+    box-shadow: 0 0 0 2px #BBBBBB;
+    padding: 6px 9px;
+    border-radius: 6px;
+    background: white;
+    display: inline-block;
+    outline: none;
+    min-width: 60px;
+    margin-right: 24px;
+
+    &:focus,
+    &:hover,
+    &:active {
+        box-shadow: 0 0 0 2px #13262E;
+    }
+}
+
+.inputWrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputLabel {
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.input {
+    @include input();
+}
+
+.button {
+    @include input();
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error {
+    color: #FF0334;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 8px;
+}
