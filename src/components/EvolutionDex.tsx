@@ -6,6 +6,7 @@
 import classNames from "classnames";
 import Image from "next/image";
 import React, { useMemo } from "react";
+import { usePokemonCaught } from "../models/ClientUserModel";
 import {
     IDexMonExtended,
     usePokemonInRegion,
@@ -14,6 +15,7 @@ import {
 import { useSearchContext } from "./DexSearch";
 import styles from "./EvolutionDex.module.scss";
 import { LayoutContainer } from "./LayoutContainer";
+import { PokeballIcon } from "./PokeballIcon";
 
 interface IProps {
     regionName: string;
@@ -118,13 +120,33 @@ function PokemonItem(props: IDexMonExtended) {
     const isSearched =
         searchTerm &&
         props.name.toLowerCase().includes(searchTerm.toLowerCase());
+    const { isPokemonCaught, setPokemonCaught } = usePokemonCaught();
+    const isCaught = isPokemonCaught(props.familyID);
+    const buttonTitle = isCaught
+        ? "Mark pokemon as Not Caught"
+        : "Mark pokemon as Caught";
+
     return (
         <div
-            className={styles.pokemon + " " + (isSearched ? "isActive" : "")}
+            className={classNames(styles.pokemon, {
+                isActive: isSearched,
+                isCaught,
+            })}
             id={props.slug}
         >
             <h3 className={styles.pokemonTitle}>
                 <a href={props.bulbapediaUrl}>{props.name}</a>
+                <button
+                    className={styles.caughtButton}
+                    type="button"
+                    title={buttonTitle}
+                    aria-label={buttonTitle}
+                    onClick={() => {
+                        setPokemonCaught(props.familyID, !isCaught);
+                    }}
+                >
+                    <PokeballIcon isCaught={isCaught} />
+                </button>
             </h3>
             <div className={styles.pokemonImageRow}>
                 <Image

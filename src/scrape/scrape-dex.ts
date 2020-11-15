@@ -80,19 +80,24 @@ async function scrapeFamily(family: IDexFamily): Promise<IDexMon[]> {
         const numberElement: Element = numberElements[1] ?? numberElements[0];
         if (!numberElement) {
             console.log("Couldn't find dex number for url " + url);
+            continue;
         }
+
         const nationalID = Number.parseInt(
-            normalizeName(numberElement.textContent).replace("#", "")
+            normalizeName(numberElement.textContent!).replace("#", "")
         );
         const sidePanel = numberElement.closest("table");
+        if (!sidePanel) {
+            continue;
+        }
         const images = Array.from(sidePanel.querySelectorAll(".image img"));
 
         const baseName = normalizeName(
-            sidePanel.querySelector("big big b").textContent ?? ""
+            sidePanel.querySelector("big big b")?.textContent ?? ""
         );
 
         for (const image of images) {
-            let name = normalizeName(image.getAttribute("alt"));
+            let name = normalizeName(image?.getAttribute("alt") ?? "Unknown");
 
             if (!name.includes(baseName)) {
                 name = `${baseName} (${name})`;
@@ -102,7 +107,7 @@ async function scrapeFamily(family: IDexFamily): Promise<IDexMon[]> {
                 continue;
             }
 
-            const imageUrl = image.getAttribute("src");
+            const imageUrl = image.getAttribute("src") ?? "404.jpg";
 
             terminal.styleReset(`#${nationalID} - `).bold.green(name + " ");
             if (wasCached) {
@@ -140,7 +145,7 @@ async function scrapeIndex(): Promise<IDexFamily[]> {
     const tables = Array.from(dom.querySelectorAll("h3 ~ table"));
     for (const table of tables) {
         const regionName = normalizeName(
-            table.previousElementSibling.textContent
+            table.previousElementSibling?.textContent!
         )
             .replace("-based evolution families", "")
             .replace(" evolution families", "");
@@ -151,7 +156,7 @@ async function scrapeIndex(): Promise<IDexFamily[]> {
         for (const tableRow of Array.from(table.querySelectorAll("tr"))) {
             const tableHead = tableRow.querySelector("th");
             if (tableHead) {
-                currentFamilyName = normalizeName(tableHead.textContent);
+                currentFamilyName = normalizeName(tableHead.textContent!);
                 const style = tableHead.getAttribute("style") ?? "";
                 const color = COlOR_REGEX.exec(style)?.groups?.["color"];
                 if (!color) {
@@ -220,7 +225,7 @@ function rgbToHex(rgb: string) {
         return (
             "#" +
             rgb
-                .match(/\d+/g)
+                .match(/\d+/g)!
                 .map(function (x) {
                     x = parseInt(x).toString(16);
                     return x.length == 1 ? "0" + x : x;

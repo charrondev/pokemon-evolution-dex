@@ -65,7 +65,6 @@ export function DexSearch(props: IProps) {
 
     useEffect(() => {
         function handler(e: KeyboardEvent) {
-            console.log(e.key);
             if (e.metaKey && e.key === "k") {
                 e.preventDefault();
                 toggle();
@@ -76,7 +75,6 @@ export function DexSearch(props: IProps) {
                 close();
             }
 
-            console.log(e.metaKey, e.key);
             if (matchCount > 1 && e.metaKey) {
                 e.preventDefault();
                 if (e.key === "ArrowDown" || e.key === "ArrowRight") {
@@ -177,6 +175,9 @@ export function SearchContext(props: { children: React.ReactNode }) {
     }
 
     function goNext() {
+        if (currentIndex === null) {
+            return;
+        }
         if (currentIndex === foundItemSlugs.length - 1) {
             setCurrentIndex(0);
         } else {
@@ -185,6 +186,9 @@ export function SearchContext(props: { children: React.ReactNode }) {
     }
 
     function goPrev() {
+        if (currentIndex === null) {
+            return;
+        }
         if (currentIndex === foundItemSlugs.length - 1) {
             setCurrentIndex(0);
         } else {

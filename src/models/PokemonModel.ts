@@ -60,7 +60,7 @@ export class PokemonModel {
             if (!this.pokemonByRegion.has(regionName)) {
                 this.pokemonByRegion.set(regionName, []);
             }
-            this.pokemonByRegion.get(regionName).push(pokemon);
+            this.pokemonByRegion.get(regionName)!.push(pokemon);
         });
 
         this.allPokemon = this.applyFamilyIDs(pokemonData);
@@ -71,7 +71,7 @@ export class PokemonModel {
     }
 
     public getPokemonInRegion(regionName: string): IDexMonExtended[] {
-        return this.applyFamilyIDs(this.pokemonByRegion.get(regionName));
+        return this.applyFamilyIDs(this.pokemonByRegion.get(regionName) ?? []);
     }
 
     public search(keyword: string): string[] {
@@ -88,7 +88,9 @@ export class PokemonModel {
     }
 
     public getRegionKey(region: string) {
-        return RegionKeys[region.toLowerCase()] ?? "O";
+        return (
+            RegionKeys[region.toLowerCase() as keyof typeof RegionKeys] ?? "O"
+        );
     }
 
     private applyFamilyIDs(dexMon: IDexMon[]): IDexMonExtended[] {
@@ -111,7 +113,7 @@ export class PokemonModel {
     /**
      * Parse a string into a URL friendly format.
      *
-     * Eg. Why Uber isn’t spelled Über -> why-uber-isnt-spelled-uber
+     * Eg. Why Uber isn't spelled Über -> why-uber-isnt-spelled-uber
      *
      * @param str The string to parse.
      */
