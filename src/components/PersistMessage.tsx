@@ -47,7 +47,7 @@ export function PersistMessage(props: IProps) {
                         value={inputName}
                         minLength={3}
                         onChange={(e) => setInputName(e.target.value)}
-                        placeholder="A5513"
+                        placeholder="A11A11"
                     />
                 </label>
                 <button

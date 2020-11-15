@@ -95,7 +95,6 @@ function useDirtyState<T>(
         (val: T) => {
             _setter(val);
             dirtyRef.current = true;
-            console.log("setting dirty");
         },
         [_setter, dirtyRef]
     );
