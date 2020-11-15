@@ -29,6 +29,7 @@ export function ClientUserContext(props: { children: React.ReactNode }) {
         [],
         isDirty
     );
+    const isLoaded = useRef(false);
 
     // Load initial userdata.
     useEffect(() => {
@@ -39,6 +40,7 @@ export function ClientUserContext(props: { children: React.ReactNode }) {
             const existingUser: IUser = JSON.parse(existing);
             setCaughtFamilyIDs(existingUser.caughtFamilyIDs);
             setUserName(existingUser.nameSlug);
+            isLoaded.current = true;
         }
     }, [setCaughtFamilyIDs, setUserName]);
 
@@ -54,6 +56,11 @@ export function ClientUserContext(props: { children: React.ReactNode }) {
                     return;
                 }
 
+                if (!isLoaded.current) {
+                    return;
+                }
+
+                console.trace("Stashing user", user);
                 localStorage.setItem(LOCAL_STORAGE_NAME, JSON.stringify(user));
                 isDirty.current = false;
             },
