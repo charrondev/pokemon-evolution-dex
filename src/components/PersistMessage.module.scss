@@ -10,6 +10,7 @@
 
 .row {
     display: flex;
+    justify-content: flex-start;
     align-items: flex-end;
     flex-wrap: wrap;
 }
@@ -28,6 +29,7 @@
     outline: none;
     min-width: 60px;
     margin-right: 24px;
+    margin-bottom: 8px;
 
     &:focus,
     &:hover,
@@ -53,14 +55,15 @@
 
 .button {
     @include input();
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+    padding-top:0;
+    padding-bottom: 0;
 }
 
 .error {
     color: #FF0334;
     font-size: 12px;
     line-height: 1.5;
-    margin-top: 8px;
 }
